@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
 from django.urls import path
+from weightLoss import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^weighttracker/(?P<pk>[0-9]+)$', views.weight_tracker_list)
 ]

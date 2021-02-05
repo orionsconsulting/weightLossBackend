@@ -20,7 +20,7 @@ class UserSerializer(serializers.Serializer):
 class WeightTrackerSerializer(serializers.Serializer):
     pk = serializers.IntegerField(read_only=True)
     date = serializers.DateField()
-    weight = serializers.DecimalField(max_digits=3, decimal_places=2)
+    weight = serializers.DecimalField(decimal_places=2, max_digits=5)
 
     def create(self, validated_data):
         return User.objects.create(**validated_data)
