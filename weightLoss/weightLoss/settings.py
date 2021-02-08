@@ -25,7 +25,9 @@ SECRET_KEY = ')&d&hihzxe6_%^9)2$ql$xd@gqh2ob2kqjak@pu&8$yep9-slt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['weight-loss-backend-wg3o6.ondigitalocean.app']
+ALLOWED_HOSTS = [
+    'weight-loss-backend-wg3o6.ondigitalocean.app',
+    'localhost']
 
 # Application definition
 
@@ -55,7 +57,7 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "weight-loss-backend-wg3o6.ondigitalocean.app"
+    "https://weight-loss-frontend-bohrc.ondigitalocean.app"
 ]
 
 ROOT_URLCONF = 'weightLoss.urls'
