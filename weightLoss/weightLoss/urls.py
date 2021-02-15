@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from django.urls import path
+from django.urls import include, path
 from weightLoss import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^weighttracker/(?P<pk>[0-9]+)$', views.weight_tracker_list)
 ]

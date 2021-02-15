@@ -1,9 +1,9 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
-class User(models.Model):
-    firstName = models.CharField(max_length=30)
-    lastName = models.CharField(max_length=30)
+class User(AbstractUser):
+    pass
 
 
 class WeightTracker(models.Model):

@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'weight-loss-backend-wg3o6.ondigitalocean.app',
-    'localhost']
+    'localhost',
+    '127.0.0.1'
+]
 
 # Application definition
 
@@ -41,7 +43,8 @@ INSTALLED_APPS = [
     'social_django',
     'weightLoss',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'oauth2_provider',
 ]
 
 MIDDLEWARE = [
@@ -107,6 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'weightLoss.User'
+LOGIN_URL='/admin/login/'
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
