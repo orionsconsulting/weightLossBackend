@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'weight-loss-backend-wg3o6.ondigitalocean.app',
-    'localhost']
+    'localhost',
+    'https://master.dd6kredxjsdpb.amplifyapp.com/'
+]
 
 # Application definition
 
@@ -57,7 +59,8 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://weight-loss-frontend-bohrc.ondigitalocean.app"
+    "https://weight-loss-frontend-bohrc.ondigitalocean.app",
+    "https://master.dd6kredxjsdpb.amplifyapp.com/"
 ]
 
 ROOT_URLCONF = 'weightLoss.urls'
